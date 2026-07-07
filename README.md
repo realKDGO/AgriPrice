@@ -34,9 +34,9 @@ AgriPrice/
 ## Quick Start
 
 ### Prerequisites
-- Node.js ≥ 18.x
-- npm ≥ 9.x
-- MySQL ≥ 8.x
+- Node.js
+- npm
+- MySQL
 
 ---
 
@@ -51,9 +51,9 @@ cd AgriPrice
 ### 2. Backend Setup
 ```bash
 cd backend
-cp .env.example .env        # Fill in your DB credentials
+cp .env.example .env
 npm install
-npm run dev                 # Starts on http://localhost:5000
+npm run dev
 ```
 
 **Verify**: `GET http://localhost:5000/api/health` → `{ "status": "ok" }`
@@ -63,47 +63,20 @@ npm run dev                 # Starts on http://localhost:5000
 ### 3. Frontend Setup
 ```bash
 cd frontend
-cp .env.example .env        # Set VITE_API_BASE_URL if needed
+cp .env.example .env
 npm install
-npm run dev                 # Starts on http://localhost:5173
+npm run dev
 ```
 
 ---
 
 ### 4. Database Setup
 ```bash
-# Connect to MySQL and run migrations in order
+
 mysql -u root -p < database/migrations/001_init.sql
 mysql -u root -p < database/seeds/001_seed.sql
 ```
 
----
-
-## Environment Variables
-
-### Backend (`backend/.env`)
-```
-PORT=5000
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=agriprice
-NODE_ENV=development
-```
-
-### Frontend (`frontend/.env`)
-```
-VITE_API_BASE_URL=http://localhost:5000/api
-```
-
----
-
-## Team Conventions
-
-- Branch naming: `feature/<name>`, `fix/<name>`, `chore/<name>`
-- Commit style: [Conventional Commits](https://www.conventionalcommits.org/)
-- PRs require at least 1 reviewer before merge
 
 ---
 
