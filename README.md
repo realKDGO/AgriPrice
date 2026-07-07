@@ -17,19 +17,6 @@
 
 ---
 
-## Project Structure
-
-```
-AgriPrice/
-├── frontend/
-├── backend/
-├── database/
-├── docs/
-├── .gitignore
-└── README.md
-```
-
----
 
 ## Quick Start
 
@@ -42,7 +29,7 @@ AgriPrice/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/AgriPrice.git
+git clone https://github.com/realKDGO/AgriPrice.git
 cd AgriPrice
 ```
 
@@ -66,15 +53,6 @@ cd frontend
 cp .env.example .env
 npm install
 npm run dev
-```
-
----
-
-### 4. Database Setup
-```bash
-
-mysql -u root -p < database/migrations/001_init.sql
-mysql -u root -p < database/seeds/001_seed.sql
 ```
 
 
