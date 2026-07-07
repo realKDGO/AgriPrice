@@ -21,10 +21,10 @@
 
 ```
 AgriPrice/
-├── frontend/          # React (Vite) app
-├── backend/           # Node.js + Express API
-├── database/          # SQL migration & seed scripts
-├── docs/              # Project documentation
+├── frontend/
+├── backend/
+├── database/
+├── docs/
 ├── .gitignore
 └── README.md
 ```
