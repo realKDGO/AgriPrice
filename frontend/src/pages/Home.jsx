@@ -5,7 +5,7 @@
 function Home() {
   return (
     <div>
-      <h1>🌾 Welcome to AgriPrice</h1>
+      <h1>Welcome to AgriPrice</h1>
       <p>Your go-to platform for agricultural commodity price tracking.</p>
     </div>
   );
