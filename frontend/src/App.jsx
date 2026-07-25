@@ -1,23 +1,22 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout';
-import Home from './pages/Home';
+import BrowserRouter from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 /**
  * App.jsx — Root component.
  * Add new routes here as the project grows.
  */
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Main layout wraps all public pages */}
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          {/* TODO: Add more routes (e.g. /prices, /about) */}
-        </Route>
-      </Routes>
+      <div className="App">
+        <Header />
+        <Footer />
+        <div>Test</div>
+      </div>
     </BrowserRouter>
-  );
+    
+  )
 }
 
 export default App;

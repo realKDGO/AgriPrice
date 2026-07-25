@@ -1,41 +1,27 @@
-'use strict';
+/**
+ * server.js
+ *
+ * HTTP server entry point.
+ *
+ * Sole responsibility: import the configured Express app, bind it to a port,
+ * and log a startup message. Keeping this separate from app.js means the app
+ * can be imported in integration tests without starting a real server.
+ */
 
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const morgan = require('morgan');
+import { env } from './config/env.js';
+import app from './app.js';
 
-const routes = require('./routes/index');
-const notFound = require('./middleware/notFound');
-const errorHandler = require('./middleware/errorHandler');
+const PORT = env.PORT;
+const ENV  = env.NODE_ENV;
 
-const app = express();
-const PORT = process.env.PORT || 5000;
-
-// ── Middleware ────────────────────────────────────────────────────
-app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
-  credentials: true,
-}));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// HTTP request logging (development only)
-if (process.env.NODE_ENV !== 'production') {
-  app.use(morgan('dev'));
-}
-
-// ── Routes ────────────────────────────────────────────────────────
-app.use('/api', routes);
-
-// ── 404 & Error Handlers (must be last) ──────────────────────────
-app.use(notFound);
-app.use(errorHandler);
-
-// ── Start Server ──────────────────────────────────────────────────
 app.listen(PORT, () => {
-  console.log(`✅  AgriPrice API running on http://localhost:${PORT}`);
-  console.log(`    Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log('');
+  console.log('╔══════════════════════════════════════════════════╗');
+  console.log('║          🌾  AgriPrice API  — Online             ║');
+  console.log('╚══════════════════════════════════════════════════╝');
+  console.log(`  ▶  Server   : http://localhost:${PORT}`);
+  console.log(`  ▶  Env      : ${ENV}`);
+  console.log(`  ▶  Health   : http://localhost:${PORT}/api/v1/health`);
+  console.log('');
 });
 
-module.exports = app;
