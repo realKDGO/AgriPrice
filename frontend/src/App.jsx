@@ -1,19 +1,18 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout';
-import Home from './pages/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
-/**
- * App.jsx — Root component.
- * Add new routes here as the project grows.
- */
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Main layout wraps all public pages */}
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
+
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          {/* TODO: Add more routes (e.g. /prices, /about) */}
         </Route>
       </Routes>
     </BrowserRouter>
