@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import PortalLayout from "./layouts/PortalLayout";
-import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/admin/Dashboard";
 import UserAccounts from "./pages/admin/UserAccounts";
 import MaoAccounts from "./pages/admin/MaoAccounts";
@@ -14,7 +13,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<SignIn />} />
         <Route element={<PortalLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="/users" element={<UserAccounts />} />
