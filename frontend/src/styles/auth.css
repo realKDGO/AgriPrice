@@ -1,3 +1,5 @@
+html,body,#root{width:100%;min-height:100%;margin:0;padding:0}
+body{min-height:100vh}
 :root { --auth-green:#123d2e; --auth-accent:#2d8a57; --auth-text:#183128; --auth-muted:#6b756f; --auth-border:#dce3dd; --auth-bg:#f8f7f3; }
 * { box-sizing: border-box; }
 .auth-shell{min-height:100dvh;display:grid;grid-template-columns:1fr 1fr;background:var(--auth-bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--auth-text)}
