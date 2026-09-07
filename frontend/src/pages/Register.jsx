@@ -1,6 +1,3 @@
+import AuthPage from "../components/AuthPage";
 
-function Register() {
-return <h1>Hello, World!</h1>;
-}
-
-export default Register;
+export default function Register() { return <AuthPage mode="register" />; }

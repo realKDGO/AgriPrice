@@ -44,14 +44,9 @@ font-size: 16px;
 }
 
 .signin-brand__logo {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-width: 26px;
-height: 26px;
-border-radius: 50%;
-background: #f4d35e;
-font-size: 14px;
+width: 30px;
+height: 30px;
+object-fit: contain;
 }
 
 .signin-left__heading {

@@ -32,9 +32,7 @@ return (
     <div className="signup-page">
     <div className="signup-panel">
         <div className="signup-panel__brand">
-        <span className="signup-panel__logo" aria-hidden="true">
-            🌾
-        </span>
+        <img className="signup-panel__logo" src="/agriprice-logo.png" alt="" aria-hidden="true" />
         <span className="signup-panel__brand-name">AgriPrice</span>
         </div>
 

@@ -23,8 +23,9 @@
     gap: 10px;
     }
     .signup-panel__logo {
-    font-size: 22px;
-    line-height: 1;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
     }
     .signup-panel__brand-name {
     font-size: 20px;
