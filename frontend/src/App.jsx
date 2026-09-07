@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import PortalLayout from "./layouts/PortalLayout";
-import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/mao/Dashboard";
 import CropManagement from "./pages/mao/CropManagement";
 import MarketManagement from "./pages/mao/MarketManagement";
@@ -15,7 +14,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<SignIn />} />
         <Route element={<PortalLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="/crops" element={<CropManagement />} />
