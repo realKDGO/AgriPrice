@@ -1,6 +1,1 @@
-.wrapper{
-    position: relative;
-    width: 420px;
-    height: 450px;
-    background: #08b80e;
-}
+@import "./styles/portal.css";
