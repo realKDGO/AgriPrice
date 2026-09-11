@@ -75,10 +75,8 @@ export default function Dashboard() {
         </div>
       </aside>
 
-      {/* MAIN CONTENT AREA */}
       <div style={styles.mainContent}>
 
-        {/* HEADER */}
         <header style={styles.header}>
           <h1 style={styles.headerTitle}>MAO Dashboard</h1>
           <div style={styles.headerRight}>
@@ -88,10 +86,8 @@ export default function Dashboard() {
           </div>
         </header>
 
-        {/* MAIN BODY */}
         <main style={styles.mainBody}>
 
-          {/* BANNER SECTION */}
           <div style={styles.banner}>
             <p style={styles.bannerText}>Keep Jala-Jala's crop information accurate and up to date.</p>
             <button style={styles.bannerBtn}>
@@ -100,7 +96,6 @@ export default function Dashboard() {
             </button>
           </div>
 
-          {/* 4 STAT CARDS */}
           <div style={styles.rowGrid4}>
             <div style={styles.card}>
               <div style={styles.cardHeaderTop}>
@@ -136,7 +131,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* PRICES NEEDING ATTENTION TABLE */}
           <div style={styles.tableCard}>
             <div style={styles.tableHeaderContainer}>
               <h3 style={styles.tableSectionTitle}>Prices needing attention</h3>
@@ -185,7 +179,6 @@ export default function Dashboard() {
             </table>
           </div>
 
-          {/* BOTTOM SECTION CARDS */}
           <div style={styles.rowGrid2}>
             <div style={styles.infoCard}>
               <h3 style={styles.infoCardTitle}>Maintain agricultural information</h3>
