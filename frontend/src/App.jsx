@@ -7,15 +7,14 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { GoHistory } from "react-icons/go";
 
 export default function App() {
-  const cropData = [
-    { id: 1, crop: 'Rice', category: 'Grain', unit: 'kg', status: 'Active' },
-    { id: 2, crop: 'Tomato', category: 'Vegetable', unit: 'kg', status: 'Active' },
-    { id: 3, crop: 'Eggplant', category: 'Vegetable', unit: 'kg', status: 'Active' },
-    { id: 4, crop: 'Corn', category: 'Grain', unit: 'kg', status: 'Active' },
-    { id: 5, crop: 'Onion', category: 'Vegetable', unit: 'kg', status: 'Active' },
-    { id: 6, crop: 'Banana', category: 'Fruit', unit: 'kg', status: 'Active' },
-    { id: 7, crop: 'Cabbage', category: 'Vegetable', unit: 'kg', status: 'Active' },
-    { id: 8, crop: 'Garlic', category: 'Vegetable', unit: 'kg', status: 'Active' },
+  const marketData = [
+    { id: 1, market: 'Antipolo Public Market', location: 'Antipolo City, Rizal', transport: '₱180.00', status: 'Active' },
+    { id: 2, market: 'Cainta Public Market', location: 'Cainta, Rizal', transport: '₱150.00', status: 'Active' },
+    { id: 3, market: 'Binangonan Public Market', location: 'Binangonan, Rizal', transport: '₱240.00', status: 'Active' },
+    { id: 4, market: 'Taytay Public Market', location: 'Taytay, Rizal', transport: '₱200.00', status: 'Active' },
+    { id: 5, market: 'Angono Public Market', location: 'Angono, Rizal', transport: '₱220.00', status: 'Active' },
+    { id: 6, market: 'Rodriguez (Montalban) Market', location: 'Rodriguez, Rizal', transport: '₱280.00', status: 'Active' },
+    { id: 7, market: 'Teresa Public Market', location: 'Teresa, Rizal', transport: '₱260.00', status: 'Active' },
   ];
 
   return (
@@ -34,11 +33,11 @@ export default function App() {
                 <TbLayoutDashboard size={20} />
                 <span>Dashboard</span>
               </a>
-              <a href="#" style={styles.activeNavLink}>
+              <a href="#" style={styles.navLink}>
                 <LuSprout size={20} />
                 <span>Crop Management</span>
               </a>
-              <a href="#" style={styles.navLink}>
+              <a href="#" style={styles.activeNavLink}>
                 <LuStore size={20} />
                 <span>Market Management</span>
               </a>
@@ -86,7 +85,7 @@ export default function App() {
 
       <div style={styles.mainContent}>
         <header style={styles.header}>
-          <h1 style={styles.headerTitle}>Crop Management</h1>
+          <h1 style={styles.headerTitle}>Market Management</h1>
           <div style={styles.headerRight}>
             <button style={styles.notifBtn}>
               <TbBell size={18} color="#374151" />
@@ -98,7 +97,7 @@ export default function App() {
           <div style={styles.banner}>
             <p style={styles.bannerText}>Maintain agricultural records used throughout AgriPrice.</p>
             <button style={styles.bannerBtn}>
-              <span>+ Add crop</span>
+              <span>+ Add market</span>
             </button>
           </div>
 
@@ -115,14 +114,7 @@ export default function App() {
               <div style={styles.filterGroup}>
                 <span style={styles.filterLabel}>Status</span>
                 <div style={styles.dropdownBox}>
-                  <span>All Statuses</span>
-                  <span style={styles.dropdownArrow}>▼</span>
-                </div>
-              </div>
-              <div style={styles.filterGroup}>
-                <span style={styles.filterLabel}>Category</span>
-                <div style={styles.dropdownBox}>
-                  <span>All categories</span>
+                  <span>Active</span>
                   <span style={styles.dropdownArrow}>▼</span>
                 </div>
               </div>
@@ -131,26 +123,26 @@ export default function App() {
 
           <div style={styles.tableCard}>
             <div style={styles.tableHeaderContainer}>
-              <h3 style={styles.tableSectionTitle}>8 records</h3>
+              <h3 style={styles.tableSectionTitle}>7 records</h3>
               <span style={styles.tableSubTitle}>Current records</span>
             </div>
 
             <table style={styles.table}>
               <thead>
                 <tr style={styles.trHead}>
-                  <th style={styles.th}>CROP</th>
-                  <th style={styles.th}>CATEGORY</th>
-                  <th style={styles.th}>UNIT</th>
+                  <th style={styles.th}>MARKET</th>
+                  <th style={styles.th}>LOCATION</th>
+                  <th style={styles.th}>TRANSPORT / 100 KG</th>
                   <th style={styles.th}>STATUS</th>
                   <th style={styles.thAction}>ACTIONS</th>
                 </tr>
               </thead>
               <tbody>
-                {cropData.map((item, index) => (
-                  <tr key={item.id} style={index === cropData.length - 1 ? styles.trBodyLast : styles.trBody}>
-                    <td style={{...styles.td, fontWeight: '500', color: '#111827'}}>{item.crop}</td>
-                    <td style={styles.td}>{item.category}</td>
-                    <td style={styles.td}>{item.unit}</td>
+                {marketData.map((item, index) => (
+                  <tr key={item.id} style={index === marketData.length - 1 ? styles.trBodyLast : styles.trBody}>
+                    <td style={{...styles.td, fontWeight: '500', color: '#111827'}}>{item.market}</td>
+                    <td style={styles.td}>{item.location}</td>
+                    <td style={styles.td}>{item.transport}</td>
                     <td style={styles.td}>
                       <span style={styles.activeBadge}>{item.status}</span>
                     </td>
