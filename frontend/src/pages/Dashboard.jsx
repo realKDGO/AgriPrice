@@ -10,7 +10,6 @@ export default function Dashboard() {
   return (
     <div style={styles.container}>
 
-      {/* SIDEBAR */}
       <aside style={styles.sidebar}>
         <div style={styles.topContent}>
           <div style={styles.brandContainer}>
