@@ -25,7 +25,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route element={<MainLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="/prices" element={<CropPrices />} />
+          <Route path="/crop-prices" element={<CropPrices />} />
           <Route path="/historical" element={<HistoricalPrices />} />
           <Route path="/forecast" element={<Forecast />} />
           <Route path="/markets" element={<MarketRecommendation />} />
